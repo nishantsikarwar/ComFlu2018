@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="137dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lecture_details"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginTop="0dp"
+    app:cardCornerRadius="7dp"
+    android:elevation="4dp"
+    app:cardElevation="7dp">
+
+        <TextView
+            android:id="@+id/tvIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_drawable"
+            android:text="@string/a" />
+
+        <TextView
+            android:id="@+id/lecture_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tvIcon"
+            android:layout_toRightOf="@+id/tvIcon"
+            android:padding="11dp"
+            android:text="@string/card_title"
+            android:textColor="#000000"
+            android:textSize="27sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/professor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lecture_topic"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/tvIcon"
+            android:layout_toRightOf="@+id/tvIcon"
+            android:text="@string/textview"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/lecture_abstract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/professor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/tvIcon"
+            android:layout_toRightOf="@+id/tvIcon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/this_is_a_very_long_text_and_we_need_to_show_3_dots" />
+
+    <TextView
+        android:id="@+id/lecture_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lecture_topic"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="3sp"
+        android:text="@string/time"/>
+
+        <ImageView
+            android:id="@+id/marked_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/lecture_time"
+            android:padding="5dp"
+            android:src="@drawable/ic_star_black_24dp"/>
+
+
+
+
+
+</RelativeLayout>
