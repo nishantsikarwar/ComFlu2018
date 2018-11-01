@@ -6,15 +6,15 @@ public class CardData {
     private String lecture_time;
     private String professor;
     private String lecture_abstract;
- //   private Boolean marked;
+    private Boolean marked;
 
-//    public Boolean getMarked() {
-//        return marked;
-//    }
-//
-//    public void setMarked(Boolean marked) {
-//        this.marked = marked;
-//    }
+    public Boolean getMarked() {
+        return marked;
+    }
+
+    public void setMarked(Boolean marked) {
+        this.marked = marked;
+    }
 
 
 
@@ -50,12 +50,12 @@ public class CardData {
         this.lecture_abstract = lecture_abstract;
     }
 
-    public CardData(String lecture_topic, String lecture_time, String professor, String lecture_abstract) {
+    public CardData(String lecture_topic, String lecture_time, String professor, String lecture_abstract,Boolean marked) {
         this.lecture_topic = lecture_topic;
         this.lecture_time = lecture_time;
         this.professor = professor;
         this.lecture_abstract = lecture_abstract;
-        //this.marked = marked;
+        this.marked = marked;
     }
 
 

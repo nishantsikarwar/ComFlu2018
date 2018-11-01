@@ -2,6 +2,7 @@ package com.example.kira.comflu2018;
 
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class DetailActivity extends AppCompatActivity {
 
     public TextView lecture_topic;
@@ -19,6 +22,7 @@ public class DetailActivity extends AppCompatActivity {
     public TextView lecture_abstract;
     public ImageView marked_items;
     public TextView tvIcon;
+    public Boolean marked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,20 +45,24 @@ public class DetailActivity extends AppCompatActivity {
             lecture_time.setText(bundle.getString("time"));
             tvIcon.setText(bundle.getString("tvIcon"));
             ((GradientDrawable)tvIcon.getBackground()).setColor(bundle.getInt("colorIcon"));
-        }
+            marked = bundle.getBoolean("marked");
+         }
+       if(marked)
+    marked_items.setColorFilter(ContextCompat.getColor(DetailActivity.this,R.color.colorOrange));
 
-        marked_items.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(marked_items.getColorFilter()!=null)
-                {
-                    marked_items.clearColorFilter();
-                }
-                else{
-                    marked_items.setColorFilter(ContextCompat.getColor(DetailActivity.this,R.color.colorOrange));
-                }
-            }
-        });
+
+//        marked_items.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(marked_items.getColorFilter()!=null)
+//                {
+//                    marked_items.clearColorFilter();
+//                }
+//                else{
+//                    marked_items.setColorFilter(ContextCompat.getColor(DetailActivity.this,R.color.colorOrange));
+//                }
+//            }
+//        });
     }
 }
 
