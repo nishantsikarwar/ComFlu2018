@@ -4,14 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.os.Bundle;
-import android.os.Parcelable;
+//import android.os.Bundle;
+//import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.CardView;
+//import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseBooleanArray;
-import android.view.ContextMenu;
+//import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -29,7 +29,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LectureV
 
     private List<CardData>card_data;
     private Context mContext;
-    SparseBooleanArray itemStateArray= new SparseBooleanArray();
+    private SparseBooleanArray itemStateArray= new SparseBooleanArray();
 
    public class LectureViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
@@ -40,7 +40,6 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LectureV
        ImageView marked_items;
        TextView tvIcon;
        RelativeLayout lecture_details;
-       Boolean marked;
      //  CardView cardView;
         LectureViewHolder(View itemView) {
             super(itemView);
@@ -101,17 +100,17 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LectureV
 
     @Override
     public void onBindViewHolder(@NonNull final LectureAdapter.LectureViewHolder holder, final int position) {
+       final int pos = holder.getAdapterPosition();
         CardData data = card_data.get(position);
         holder.lecture_topic.setText(data.getLecture_topic());
         holder.lecture_time.setText(data.getLecture_time());
         holder.professor.setText(data.getProfessor());
         holder.lecture_abstract.setText(data.getLecture_abstract());
-        holder.tvIcon.setText(data.getLecture_topic().substring(0,1));
 
         Random mRandom = new Random();
        final int color = Color.argb(255, mRandom.nextInt(256), mRandom.nextInt(256), mRandom.nextInt(256));
         ((GradientDrawable)holder.tvIcon.getBackground()).setColor(color);
-        holder.bind(position);
+        holder.bind(pos);
 //
 //        holder.marked_items.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -139,7 +138,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LectureV
                 mIntent.putExtra("time", holder.lecture_time.getText().toString());
                 mIntent.putExtra("tvIcon", holder.tvIcon.getText().toString());
                 mIntent.putExtra("colorIcon", color);
-                mIntent.putExtra("marked",itemStateArray.valueAt(position));
+                mIntent.putExtra("marked",itemStateArray.valueAt(pos));
 
 //                Bundle b = new Bundle();
 //                b.putParcelableArrayList("data", (ArrayList<? extends Parcelable>) card_data);

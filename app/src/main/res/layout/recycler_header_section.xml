@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="37sp"
         android:layout_height="@dimen/recycler_section_header_height"
         android:id="@+id/lecture_time"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/blue_google"
         android:padding="1dp"
-        android:textSize="23dp"
+        android:textSize="13sp"
+        android:maxLines="2"
+        android:layout_marginTop="29sp"
         android:hint="@string/time"/>
 
 </RelativeLayout>

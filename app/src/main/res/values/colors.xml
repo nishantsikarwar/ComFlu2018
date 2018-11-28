@@ -17,4 +17,5 @@
     <color name="bg_action_mode">#757575</color>
     <color name="bg_circle_default">#666666</color>
     <color name="colorOrange">#F2B32A</color>
+    <color name="blue_google">#0000ff</color>
 </resources>

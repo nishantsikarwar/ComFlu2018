@@ -68,16 +68,14 @@ public class DummyFragment extends Fragment {
 
     public void setArrayList(ArrayList<CardData> arrayList) {
 
-        CardData data = new CardData("PHYSICS", "10:30AM", "Kurmi", "Let's go fishing with John and others. We will do some barbecue and have soo \n" +
-                "                 much fun\"", true);
+        CardData data = new CardData("NanoMaterials", "14:00PM", "Kurmi [1 Hour 20 Minutes]", "Keynote", true);
         arrayList.add(data);
 
-        data = new CardData("PHYSICS", "10:30AM", "Kurmi", "Let's go fishing with John and others. We will do some barbecue and have soo \n" +
-                "                 much fun\"", true);
+        data = new CardData("Soft Matter in Industry", "14:00PM", "Kurmi [1 Hour 20 Minutes]", "Keynote", true);
         arrayList.add(data);
 
-        data = new CardData("PHYSICS", "10:30AM", "Kurmi", "Let's go fishing with John and others. We will do some barbecue and have soo \n" +
-                "                 much fun\"", true);
+        data = new CardData("Soft Matter in Industry", "10:30AM", "Kurmi", "Keynote", true);
+        arrayList.add(data);
         arrayList.add(data);
 
         data = new CardData("PHYSICS", "10:30AM", "Kurmi", "Let's go fishing with John and others. We will do some barbecue and have soo \n" +
